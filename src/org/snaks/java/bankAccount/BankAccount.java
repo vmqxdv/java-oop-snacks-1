@@ -1,6 +1,7 @@
 package org.snaks.java.bankAccount;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class BankAccount {
 
@@ -13,14 +14,18 @@ public class BankAccount {
   }
 
   public BigDecimal getBalance() {
-    return this.balance;
+    return this.balance.setScale(2, RoundingMode.DOWN);
   }
 
   public void addBalance(BigDecimal amount) {
-    this.balance.add(amount);
+    this.balance = this.balance.add(amount);
   }
 
   public void retriveBalance(BigDecimal amount) {
-    this.balance.subtract(amount);
+    if (amount.compareTo(this.balance) > 0)
+      throw new IllegalArgumentException(
+          String.format("Saldo insufficiente per prelevare € %s", amount.setScale(2, RoundingMode.DOWN)));
+
+    this.balance = this.balance.subtract(amount);
   }
 }
