@@ -2,8 +2,14 @@ package org.snaks.java.students;
 
 public class Main {
   public static void main(String[] args) {
-    Student student = new Student("Valerio", "Quintilio", 22);
+    StudentRegister register = new StudentRegister();
 
-    System.out.println(student.getStudentData());
+    register.addStudent(new Student("Valerio", "Quintilio", 22));
+    register.addStudent(new Student("Mario", "Carta", 12));
+    register.addStudent(new Student("Marco", "Sanna", 25));
+    register.addStudent(new Student("Francesco", "Baldinu", 23));
+    register.addStudent(new Student("Luca", "Rossi", 30));
+    register.getStudents();
   }
+
 }
