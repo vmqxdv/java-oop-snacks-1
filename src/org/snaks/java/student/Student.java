@@ -1,4 +1,4 @@
-package orgs.snaks.java.student;
+package org.snaks.java.student;
 
 public class Student {
 
