@@ -1,12 +1,12 @@
 package org.snaks.java.students;
 
+import java.util.ArrayList;
+
 public class StudentRegister {
 
-  private Student[] students;
-  private int studentsAmount;
+  private ArrayList<Student> students;
 
   public StudentRegister() {
-    this.studentsAmount = 0;
-    this.students = new Student[studentsAmount];
+    this.students = new ArrayList<Student>();
   }
 }
