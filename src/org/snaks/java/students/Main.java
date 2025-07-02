@@ -1,4 +1,4 @@
-package org.snaks.java.student;
+package org.snaks.java.students;
 
 public class Main {
   public static void main(String[] args) {
