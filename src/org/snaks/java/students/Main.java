@@ -9,7 +9,7 @@ public class Main {
     register.addStudent(new Student("Marco", "Sanna", 25));
     register.addStudent(new Student("Francesco", "Baldinu", 23));
     register.addStudent(new Student("Luca", "Rossi", 30));
-    register.getStudents();
+    System.out.println(register.toString());
   }
 
 }
